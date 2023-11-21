@@ -1,7 +1,7 @@
 const scripts = [
-    '/scripts/base.js',
-    '/scripts/earth.js',
-    '/scripts/spiral.js',
+    './scripts/base.js',
+    './scripts/earth.js',
+    './scripts/spiral.js',
 ]
 
 const randomScript = scripts[Math.floor(Math.random() * scripts.length)]
