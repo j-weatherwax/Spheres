@@ -6,9 +6,9 @@ const scene = new THREE.Scene()
 //create sphere
 const geometry = new THREE.SphereGeometry(3, 64, 64)
 const textureLoader = new THREE.TextureLoader()
-const texture = textureLoader.load('/src/earth/land_shallow_topo_2048.jpg')
-const displacementTexture = textureLoader.load('/src/earth/displacement.jpg')
-const normalTexture = textureLoader.load('/src/earth/EarthNormal.png')
+const texture = textureLoader.load('./src/earth/land_shallow_topo_2048.jpg')
+const displacementTexture = textureLoader.load('./src/earth/displacement.jpg')
+const normalTexture = textureLoader.load('./src/earth/EarthNormal.png')
 const material = new THREE.MeshStandardMaterial({ 
   map: texture,
   displacementMap: displacementTexture,
@@ -20,7 +20,7 @@ scene.add(mesh)
 
 //clouds
 const cloudGeometry = new THREE.SphereGeometry(3.05, 64, 64)
-const cloudTexture = textureLoader.load('/src/earth/clouds.jpg')
+const cloudTexture = textureLoader.load('./src/earth/clouds.jpg')
 const cloudMaterial = new THREE.MeshStandardMaterial({ 
   alphaMap: cloudTexture,
   map: cloudTexture,
@@ -47,7 +47,7 @@ camera.add(light)
 
 // starry background
 const starGeometry = new THREE.BufferGeometry()
-const sprite = new THREE.TextureLoader().load('/src/earth/star.png');
+const sprite = new THREE.TextureLoader().load('./src/earth/star.png');
 const starMaterial = new THREE.PointsMaterial({
   map: sprite,
   size: 0.15,
